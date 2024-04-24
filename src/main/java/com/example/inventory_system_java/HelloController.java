@@ -23,12 +23,7 @@ public class HelloController {
     @FXML
     private TextField Password;
 
-    @FXML
-    private Stage stage;
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
     @FXML
     protected void onLogInButtonClick() throws IOException {
         try(Connection connection = MySQLConnection.getConnection();
@@ -102,6 +97,6 @@ public class HelloController {
         INVstage.setScene(new Scene(root));
         INVstage.show();
 
-        stage.close();
+
     }
 }
