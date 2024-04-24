@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventory_system_java.InventoryView">
+   <children>
+      <VBox prefHeight="143.0" prefWidth="600.0" AnchorPane.bottomAnchor="257.2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn id="productidcol" fx:id="ProdNameCol" prefWidth="297.19999998807907" text="ProdNameCol" />
+                <TableColumn id="productnamecol" fx:id="ProdQtyCol" prefWidth="302.0" text="ProdQtyCol" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children></VBox>
+      <VBox layoutY="145.0" prefHeight="143.0" prefWidth="600.0" AnchorPane.bottomAnchor="112.19999999999999" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="145.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="600.0">
+               <children>
+                  <Label text="Product_Name">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="ProductName" alignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="600.0">
+               <children>
+                  <Label text="Product_Quantity">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#OnplusClickBTN" prefHeight="25.0" prefWidth="25.0" text="+">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="QTYNum" text="0" />
+                  <Button mnemonicParsing="false" onAction="#OnminusClickBTN" prefHeight="25.0" prefWidth="25.0" text="-">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutY="314.0" prefHeight="86.0" prefWidth="600.0" AnchorPane.bottomAnchor="-2.8421709430404007E-14" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="314.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OnINVAddBTN" prefWidth="60.0" text="Add">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnINVDelBTN" prefWidth="60.0" text="Delete">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="-3.0" layoutY="300.0" prefHeight="27.0" prefWidth="600.0" AnchorPane.bottomAnchor="72.8" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <Label fx:id="INVMessageText" alignment="CENTER" prefHeight="25.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
